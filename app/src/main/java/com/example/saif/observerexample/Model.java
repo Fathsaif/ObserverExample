@@ -1,5 +1,7 @@
 package com.example.saif.observerexample;
 
+import android.content.Context;
+
 import java.util.*;
 import java.util.Observer;
 
@@ -9,14 +11,12 @@ import java.util.Observer;
 
 public class Model extends Observable {
     String userName;
-
-
-
     String email;
-    public Model(){
 
+    @Override
+    public synchronized void addObserver(Observer o) {
+        super.addObserver(o);
     }
-
 
     public void setUserName(String userName) {
         this.userName = userName;

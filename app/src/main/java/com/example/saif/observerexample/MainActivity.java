@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements Observer ,View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         model = new Model();
+        model.addObserver(this);
         usernameInput = (EditText) findViewById(R.id.username_et);
         emailEt = (EditText) findViewById(R.id.email_et);
         textView = (TextView) findViewById(R.id.textView);
